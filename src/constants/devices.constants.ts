@@ -1,6 +1,6 @@
-import type { DeviceConfig, DeviceType } from "../types/devices.type";
+import type { DeviceConfig } from "../types/devices.type";
 
-export const DEVICES: Record<DeviceType, DeviceConfig> = {
+export const DEVICES = {
   "iphone-15": {
     label: 'iPhone 15',
     width: 393,
@@ -157,4 +157,5 @@ export const DEVICES: Record<DeviceType, DeviceConfig> = {
     notch: false,
   },
 
-}
+} satisfies Record<string, DeviceConfig>;
+

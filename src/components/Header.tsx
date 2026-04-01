@@ -1,6 +1,6 @@
 import { DEVICES } from "../constants/devices.constants";
-import type { ThemeMode } from "../hooks/useThemeMode";
 import type { DeviceType } from "../types/devices.type";
+import type { ThemeMode } from "../hooks/useThemeMode";
 import Logo from "./Logo";
 
 interface HeaderProps {
@@ -25,7 +25,7 @@ const Header = ({ themeMode, onThemeChange }: HeaderProps) => {
       <select className="rounded-md border border-gray-300 bg-white px-4 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100">
         {(Object.keys(DEVICES) as DeviceType[]).map((device) => (
           <option key={device} value={device}>
-            {DEVICES[device].label}
+            {device.charAt(0).toUpperCase() + device.slice(1)}
           </option>
         ))}
       </select>
