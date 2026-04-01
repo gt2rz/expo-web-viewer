@@ -32,7 +32,7 @@ const Header = ({
   }
 
   return (
-    <header className="flex fixed top-0 left-0 w-full items-center justify-between p-4 z-10 gap-4">
+    <header className="flex fixed top-0 left-0 w-full items-center justify-between p-4 z-50 gap-4 bg-white/80 backdrop-blur-sm dark:bg-black/60">
       {/* Logo */}
       <Logo />
 
