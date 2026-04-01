@@ -27,8 +27,8 @@ export const DeviceFrame = forwardRef<DeviceFrameHandle, DeviceFrameProps>(
       },
     }));
 
-    const shellWidth = config.width + 24; // shell padding
-    const shellHeight = config.height + 48; // top/bottom bezel
+    const shellWidth = config.width + 12; // shell padding
+    const shellHeight = config.height + 20; // top/bottom bezel
 
     return (
       <div

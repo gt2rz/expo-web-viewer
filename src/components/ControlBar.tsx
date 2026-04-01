@@ -7,6 +7,11 @@ import { useState } from "react";
 interface HeaderProps {
   themeMode: ThemeMode;
   onThemeChange: (theme: ThemeMode) => void;
+  url: string;
+  device: DeviceType;
+  onUrlChange: (url: string) => void;
+  onDeviceChange: (device: DeviceType) => void;
+  onReload: () => void;
 }
 
 const Header = ({
@@ -20,7 +25,7 @@ const Header = ({
 }: HeaderProps) => {
   const [inputValue, setInputValue] = useState(url);
 
-  function handleKeyDown(e: KeyboardEvent<HTMLInputElement>) {
+  function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
     if (e.key === "Enter") {
       onUrlChange(inputValue);
     }
